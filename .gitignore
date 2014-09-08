@@ -1,0 +1,7 @@
+*.sdf
+*.opensdf
+Ejecutable/Game.exe
+*.pdb
+Proyecto/Game.vcxproj.user
+*.suo
+/.project
