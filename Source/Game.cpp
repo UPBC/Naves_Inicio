@@ -4,7 +4,7 @@
 #include <SDL_image.h>
 
 CGame::CGame(){
-	estado = 0;
+	estado = 0;///ACT2: MAL, AQUI DEBES DE INICIAR TU ESTADO, SEGUN LA LISTA QUE HAS CREADO.
 	atexit(SDL_Quit);
 }
 
@@ -21,7 +21,7 @@ bool CGame::Start()
 	while (salirJuego == false){
             
 		//Maquina de estados
-		switch(estado){
+		switch(estado){///ACT2:MAL, DEBES DE INCLUIR TODAS LOS ESTADOS, SON 5 Y SOLO AGREGASTE 3.
 			case Estado::ESTADO_INICIANDO:
 				if (SDL_Init( SDL_INIT_VIDEO )){
 					printf("Error %s ", SDL_GetError());
