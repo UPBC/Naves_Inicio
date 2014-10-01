@@ -3,7 +3,7 @@
 
 // La función principal del juego
 int main(int argc, char *argv[]){
-	CGame *navesGame = new CGame();//Cra un objeto usando apuntadores
+	CGame *navesGame = new CGame();//Crea un objeto usando apuntadores
 
 	if(navesGame->Start())   
 		navesGame->Finalize(); // Liberamos los recursos utilizados.
