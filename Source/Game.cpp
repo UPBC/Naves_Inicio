@@ -53,7 +53,7 @@ bool CGame::Start()
 						}*/
 			//SDL_WM_SetCaption( "Mi primer Juego", NULL );
 //Este codigo estara provicionalmente aqui
-			nave = SDL_LoadBMP("../Data/MiNave.bmp");
+		/*	nave = SDL_LoadBMP("../Data/MiNave.bmp");
 										   
 					 SDL_Rect Fuente;  
 					 Fuente.x = 90;
@@ -70,9 +70,10 @@ bool CGame::Start()
 
 					 SDL_BlitSurface(nave, NULL, screen, NULL);
 
-					SDL_FreeSurface(nave);
+					SDL_FreeSurface(nave);*/
 			break;
 		case Estado::ESTADO_MENU:
+			nave->PintarModulo(0,0,0);
 			break;
 
 			case Estado::ESTADO_JUGANDO:
