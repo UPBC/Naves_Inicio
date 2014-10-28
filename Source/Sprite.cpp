@@ -1,12 +1,15 @@
 #include <SDL.h>
 #include "Sprite.h"
+#include "config.h"
+
 Sprite::~Sprite()
 {
 	SDL_FreeSurface(image);
 }
-void Sprite::PintarModulo(int id, int x, int y );
+void Sprite::PintarModulo(int id, int x, int y )
 {
-	SDL_RECT src;
+	
+	SDL_Rect src;
 	src.x=spriteDef.modulos[id].x;
 	src.y=spriteDef.modulos[id].y;
 	src.w=spriteDef.modulos[id].w;
@@ -15,4 +18,10 @@ void Sprite::PintarModulo(int id, int x, int y );
 	dest.x=x;
 	dest.y=y;
 	SDL_BlitSurface(image,&src,screen,NULL);
-	};
+	}
+int Sprite::widthModule(int id){
+	return spriteDef.modulos[id].w;
+}
+int Sprite::HeightModule(int id){
+	return spriteDef.modulos[id].h;
+}

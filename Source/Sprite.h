@@ -1,7 +1,7 @@
-#ifndef _SPRITE_H_
-#define _SPRITE_H_
+#ifndef __SPRITE_H__
+#define __SPRITE_H__
 #include<SDL.h>
-#include"SpriteDef.h"
+#include "Spritedef.h"
 
 class Sprite 
 {
@@ -14,5 +14,7 @@ public :
 	void PintarModulo(int id,int x,int y);
 	Sprite(SDL_Surface*screen);
 	~Sprite();
+	int widthModule(int id);
+	int HeightModule(int id);
 };
 #endif

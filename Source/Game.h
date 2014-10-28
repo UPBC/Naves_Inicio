@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
-#include "sprite.h"
+#include "Nave.h"
+#include "Spritedef.h"
 
 class CGame
 {
@@ -13,7 +14,7 @@ public:
 		ESTADO_MENU,
 		ESTADO_JUGANDO,
 		ESTADO_TERMINANDO,
-		ESTADO_FINALIZANDO
+		ESTADO_FINALIZANDO,
 	};
 
 	CGame();
@@ -22,6 +23,6 @@ public:
 private:
 	void Iniciando();
      SDL_Surface *screen;
-	 Sprite * nave;
+	 Nave * nave;
 	Estado estado;
 };

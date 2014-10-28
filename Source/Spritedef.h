@@ -11,3 +11,4 @@ public :
 	Modulo modulos[1];
 	SpriteDef();//constructor
 };
+#endif
