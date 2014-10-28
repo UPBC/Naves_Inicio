@@ -7,6 +7,7 @@
 CGame::CGame(){
 	estado = ESTADO_INICIANDO;///ACT2: MAL, AQUI DEBES DE INICIAR TU ESTADO, SEGUN LA LISTA QUE HAS CREADO.
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (SDL_Init(SDL_INIT_VIDEO)){
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE);	
@@ -36,15 +37,44 @@ void CGame::Iniciando(){
 	if (SDL_Init(SDL_INIT_VIDEO)){
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE);	
+=======
+	atexit(SDL_Quit);
+	//ACT3: MAL, el siguiente codigo no va aqui
+	//if (SDL_Init(SDL_INIT_VIDEO)){
+	//	printf("Error %s ", SDL_GetError());
+	//	exit(EXIT_FAILURE);	
+	//
+	//	}
+
+	//screen = SDL_SetVideoMode( WIDTH_SCREEN, HEIGHT_SCREEN, 24, SDL_SWSURFACE);
+
+	//if (screen == NULL){
+	//	printf("Error %s ", SDL_GetError());
+	//	exit(EXIT_FAILURE); 
+	//}
+	//    SDL_Flip(screen);
+	//    SDL_WM_SetCaption("Mi primer Juego", NULL);
+
+}
+
+void CGame::Iniciando(){
+	if (SDL_Init(SDL_INIT_VIDEO)){
+		printf("Error %s ", SDL_GetError());
+		exit(EXIT_FAILURE);	
+>>>>>>> origin/master
 	}
 
 	screen = SDL_SetVideoMode( WIDTH_SCREEN, HEIGHT_SCREEN, 24, SDL_SWSURFACE);
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 	if (screen == NULL){
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE); 
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD
 	    
 	    SDL_WM_SetCaption("Mi primer Juego", NULL);
@@ -52,12 +82,17 @@ void CGame::Iniciando(){
  
 }
 =======
+=======
+>>>>>>> origin/master
 	//    SDL_Flip(screen);
 	SDL_WM_SetCaption("Mi primer Juego", NULL);
 }
 
 
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 // Con esta función eliminaremos todos los elementos en pantalla
 void CGame::Finalize(){
@@ -114,6 +149,9 @@ bool CGame::Start()
 			SDL_BlitSurface(nave, NULL, screen, NULL);
 
 			SDL_FreeSurface(nave);*/
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 			break;
 		case Estado::ESTADO_MENU:
@@ -125,6 +163,7 @@ bool CGame::Start()
 			nave->Pintar();
 			break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 			case Estado::ESTADO_JUGANDO:
 =======
 
@@ -133,6 +172,13 @@ bool CGame::Start()
 			break;
 		case Estado::ESTADO_FINALIZANDO:
 			break;
+=======
+
+		case Estado::ESTADO_JUGANDO:
+			break;
+		case Estado::ESTADO_FINALIZANDO:
+			break;
+>>>>>>> origin/master
 		case Estado::ESTADO_TERMINANDO:
 			salirJuego = true;
 			break;
