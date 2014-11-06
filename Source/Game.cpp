@@ -4,16 +4,18 @@
 #include <SDL_image.h>
 #include <SDL.h>
 #include "config.h"
+#include "Nave.h"
+
 CGame::CGame(){
 	estado = ESTADO_INICIANDO;///ACT2: MAL, AQUI DEBES DE INICIAR TU ESTADO, SEGUN LA LISTA QUE HAS CREADO.
-<<<<<<< HEAD
-<<<<<<< HEAD
-if (SDL_Init(SDL_INIT_VIDEO)){
+
+if (SDL_Init(SDL_INIT_VIDEO))
+	{
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE);	
 	}
 screen = SDL_SetVideoMode( WIDTH_SCREEN, HEIGHT_SCREEN, 24, SDL_SWSURFACE);  /* de aqui - arriba revisar*/	    
-=======
+
 	atexit(SDL_Quit);
 	//ACT3: MAL, el siguiente codigo no va aqui
 	//if (SDL_Init(SDL_INIT_VIDEO)){
@@ -37,7 +39,7 @@ void CGame::Iniciando(){
 	if (SDL_Init(SDL_INIT_VIDEO)){
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE);	
-=======
+
 	atexit(SDL_Quit);
 	//ACT3: MAL, el siguiente codigo no va aqui
 	//if (SDL_Init(SDL_INIT_VIDEO)){
@@ -61,39 +63,38 @@ void CGame::Iniciando(){
 	if (SDL_Init(SDL_INIT_VIDEO)){
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE);	
->>>>>>> origin/master
+//>>>>>>> origin/master
 	}
 
 	screen = SDL_SetVideoMode( WIDTH_SCREEN, HEIGHT_SCREEN, 24, SDL_SWSURFACE);
 
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+//<<<<<<< HEAD
+//>>>>>>> origin/master
+//=======
+//>>>>>>> origin/master
 	if (screen == NULL){
 		printf("Error %s ", SDL_GetError());
 		exit(EXIT_FAILURE); 
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+//<<<<<<< HEAD
+//<<<<<<< HEAD
 	    
 	    SDL_WM_SetCaption("Mi primer Juego", NULL);
 		Nave = new Nave(screen);
- 
-}
-=======
-=======
->>>>>>> origin/master
-	//    SDL_Flip(screen);
+
+
+
+//>>>>>>> origin/master
+	    SDL_Flip(screen);
 	SDL_WM_SetCaption("Mi primer Juego", NULL);
 }
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+//<<<<<<< HEAD
+//>>>>>>> origin/master
+//=======
+//>>>>>>> origin/master
 // Con esta función eliminaremos todos los elementos en pantalla
 void CGame::Finalize(){
 	SDL_Quit();
@@ -101,7 +102,7 @@ void CGame::Finalize(){
 bool CGame::Start()
 {
 	// Esta variable nos ayudara a controlar la salida del juego...
-<<<<<<< HEAD
+	//<<<<<<< HEAD
 	int salirJuego = false;   
 	while (salirJuego == false){     
 		//Maquina de estados
@@ -109,7 +110,7 @@ bool CGame::Start()
 		case Estado::ESTADO_INICIANDO:	
 			Iniciando();
 			estado= ESTADO_MENU;
-=======
+//=======
 	int salirJuego = false;
 
 	while (salirJuego == false){
@@ -149,10 +150,10 @@ bool CGame::Start()
 			SDL_BlitSurface(nave, NULL, screen, NULL);
 
 			SDL_FreeSurface(nave);*/
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+//<<<<<<< HEAD
+//>>>>>>> origin/master
+//=======
+//>>>>>>> origin/master
 			break;
 		case Estado::ESTADO_MENU:
 			SDL_FillRect(screen,NULL,0x000000);
@@ -162,13 +163,13 @@ bool CGame::Start()
 			}
 			nave->Pintar();
 			break;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//<<<<<<< HEAD
+//<<<<<<< HEAD
 			case Estado::ESTADO_JUGANDO:
-=======
+//=======
 
 		case Estado::ESTADO_JUGANDO:
->>>>>>> origin/master
+//>>>>>>> origin/master
 			break;
 		case Estado::ESTADO_FINALIZANDO:
 			break;

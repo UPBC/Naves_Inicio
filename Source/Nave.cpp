@@ -1,5 +1,7 @@
 #include "Nave.h"
 #include "config.h"
+#include "Sprite.h"
+#include "Spritedef.h"
 Nave::Nave(SDL_Surface * screen){
 	sprite=new Sprite(screen)
 		sprite -> CargarImagen(rutaImagen);

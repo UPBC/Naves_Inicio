@@ -2,6 +2,7 @@
 #include <SDL_image.h>
 #include "Nave.h"
 #include "Spritedef.h"
+#include "config.h"
 
 class CGame
 {
