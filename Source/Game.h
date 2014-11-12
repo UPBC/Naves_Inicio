@@ -3,10 +3,13 @@
 #include "Nave.h"
 #include "Spritedef.h"
 #include "config.h"
+#include "Sprite.h"
 
 class CGame
 {
+	Sprite *nave;
 public:
+	Estado estado;
 	bool Start();
 	static CGame instanceGame;
 	enum Estado 
@@ -25,5 +28,9 @@ private:
 	void Iniciando();
      SDL_Surface *screen;
 	 Nave * nave;
-	Estado estado;
+	 Nave**enemigoArreglo;
+	 Nave*menu;
+	 Nave*texto;
+	 Nave*fondo;
+	Estado *estado;
 };

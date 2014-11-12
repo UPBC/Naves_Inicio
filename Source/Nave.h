@@ -6,13 +6,18 @@
 #include"Game.h"
 
 class Nave{
-	int x; int y;
+	int x; int y; int w;
+	int h; int moduleUding; int PosicionActual; int PosicionFinal;int PosicionBrinco;
 	Sprite *sprite;
 	public 
-		Nave(SDL_Surface*screen, char * rutaImagen );
+		Nave(SDL_Surface*screen, char * rutaImagen int module);
 		~Nave();
 		void Pintar();
 		void Mover (int posicion);
+		void TerminarAnimacion();
+		void IncrementarStep();
+		void Actualizar();
+
 }
 
 
