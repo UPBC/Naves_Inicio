@@ -8,7 +8,7 @@ class SpriteDef
 
 	};
 public :
-	Modulo modulos[3];///<-- numero de modulos
+	Modulo modulos[1];///<-- numero de modulos despues lo cambiaremos a 9 -10
 	SpriteDef();//constructor
 };
 #endif
